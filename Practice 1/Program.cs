@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Practice_1
 {
@@ -14,92 +15,25 @@ namespace Practice_1
     {
         static void Main(string[] args)
         {
-            string phrase = "privet6 7world AnLin 5AndreW Test";
+            Console.WriteLine("Please write 5 words");
+            string phrase = Console.ReadLine();
+ 
             string[] words = phrase.Split(' ');
 
+            Console.WriteLine(phrase);
 
-            foreach (var word in words)
+            for (int i = 0; i < words.Length; i++)
             {
-                System.Console.WriteLine($"{word}");
-            }
+                var word = words[i];
+                StringBuilder newWord = new StringBuilder();
 
-            string str = "";
-
-            for (int i = 0; i < phrase.Length; i++)
-            {
-                if (!char.IsDigit(phrase[i]))
+                for (int j = 0; j < word.Length; j++)
                 {
-                    str += phrase[i];
+
                 }
             }
-            Console.WriteLine(str);
-
-            string[] evenWordInReverseOrder = str.Split(' ');
-            for (int i = 0; i < evenWordInReverseOrder.Length; i++)
-            {
-                string current = evenWordInReverseOrder[i];
-                if (i % 2 != 0)
-                {
-                    string stri = "";
-
-                    for (int j = current.Length - 1; j >= 0; j--)
-                    {
-                        stri += current[j];
-                    }
-                    evenWordInReverseOrder[i] = stri;
-                }
-                Console.WriteLine(evenWordInReverseOrder[i]);
-            }
-
-            for (int i = 0; i < evenWordInReverseOrder.Length; i++)
-            {
-                string strn = "";
-                string current = evenWordInReverseOrder[i];
-                for (int j = 0; j < current.Length; j++)
-                {                   
-                    char currentChar = current[j];
-                    if (j == 0)
-                    {                      
-                        char str0 = char.ToUpper(currentChar);
-                        strn += str0;
-                    }
-                    else
-                    {
-                        char str1 = char.ToLower(currentChar);
-                        strn += str1;
-                    }         
-                }
-                evenWordInReverseOrder[i] = strn;                         
-            }
-
-
-            for (int i = 0; i < evenWordInReverseOrder.Length; i++)
-            {
-                string strn = "";
-                string current = evenWordInReverseOrder[i];
-                for (int j = 0; j < current.Length; j++)
-                {
-                    char currentChar = current[j];
-                    if (j == 0)
-                    {
-                        string s = current.Replace('p', 'S');
-                        string l = current.Replace('P', 'S');
-                        strn += s;
-                        strn += s;
-
-                    }
-                    else
-                    {
-
-                    }
-                }
-                evenWordInReverseOrder[i] = strn;
-            }
-
-
+           
             
-
-
         }
     }
 }
