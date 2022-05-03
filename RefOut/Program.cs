@@ -6,6 +6,10 @@ namespace RefOut
     {
         static void Main(string[] args)
         {
+            string s = Console.ReadLine();
+            bool parseResult = int.TryParse(s, out var sInt);
+
+
             int val = 10;
             int outVal;
 
